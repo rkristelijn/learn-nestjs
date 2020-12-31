@@ -1,0 +1,14 @@
+### Get all
+GET http://localhost:3000/coffees
+
+### Create
+POST http://localhost:3000/coffees 
+Content-Type: application/json
+
+{
+	"name": "hoi",
+	"brand": "x",
+	"flavors": [
+		"idk"
+	]
+}

@@ -5,6 +5,7 @@
     "nestjs",
     "postgres",
     "prettierrc",
-    "typeorm"
+    "typeorm",
+    "upsert"
   ]
 }
