@@ -8,7 +8,7 @@ import { Coffee } from './coffees.entity';
 
 @Injectable()
 export class CoffeesService {
-  private readonly logger = new Logger('CofeesService');
+  private readonly logger = new Logger('CoffeesService');
   constructor(
     @InjectRepository(Coffee)
     private readonly coffeeRepository: Repository<Coffee>,
