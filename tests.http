@@ -6,9 +6,9 @@ POST http://localhost:3000/coffees
 Content-Type: application/json
 
 {
-	"name": "hoi",
-	"brand": "x",
+	"name": "Douwe Egberts",
+	"brand": "Douwe Egberts",
 	"flavors": [
-		"idk"
+		"Dutch"
 	]
 }
