@@ -15,3 +15,6 @@ Content-Type: application/json
 		"Dutch"
 	]
 }
+
+### Recommend
+GET http://localhost:3000/coffees/1/recommend

@@ -38,6 +38,13 @@ export class CoffeesController {
     return coffee;
   }
 
+  @Get(':id/recommend')
+  async recommendCoffee(@Param('id') id: number) {
+    const coffee = await this.coffeesService.findOne(id);
+
+    this.coffeesService.recommendCoffee(coffee);
+  }
+
   @Post()
   create(@Body() createCoffeeDto: CreateCoffeeDto) {
     console.log(
