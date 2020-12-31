@@ -17,4 +17,4 @@ Content-Type: application/json
 }
 
 ### Recommend
-GET http://localhost:3000/coffees/1/recommend
+GET http://localhost:3000/coffees/2/recommend
