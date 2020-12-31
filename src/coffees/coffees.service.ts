@@ -1,7 +1,7 @@
 import { Injectable, Logger, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { Pagination } from '../core/pagination-dto';
+import { PaginationQueryDto } from '../common';
 import { CreateCoffeeDto } from './coffee-create.dto';
 import { UpdateCoffeeDto } from './coffee-update.dto';
 import { Coffee } from './coffee.entity';
@@ -17,7 +17,7 @@ export class CoffeesService {
     private readonly flavorRepository: Repository<Flavor>,
   ) {}
 
-  findAll(pagination: Pagination) {
+  findAll(pagination: PaginationQueryDto) {
     this.logger.debug({ ...pagination, location: 'findAll()' });
     return this.coffeeRepository.find({
       /**

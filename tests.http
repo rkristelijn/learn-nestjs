@@ -1,6 +1,9 @@
 ### Get all
 GET http://localhost:3000/coffees
 
+### Test pagination
+GET http://localhost:3000/coffees/?offset=1&limit=2
+
 ### Create
 POST http://localhost:3000/coffees 
 Content-Type: application/json

@@ -10,10 +10,10 @@ import {
   Post,
   Query,
 } from '@nestjs/common';
-import { Pagination } from '../core/pagination-dto';
 import { CoffeesService } from './coffees.service';
 import { CreateCoffeeDto } from './coffee-create.dto';
 import { UpdateCoffeeDto } from './coffee-update.dto';
+import { PaginationQueryDto } from '../common';
 
 @Controller('coffees')
 export class CoffeesController {
@@ -21,10 +21,10 @@ export class CoffeesController {
 
   constructor(private readonly coffeesService: CoffeesService) {}
   @Get()
-  findAll(@Query() paginationQuery) {
+  findAll(@Query() paginationQuery: PaginationQueryDto) {
     const { limit = 10, offset = 0 } = paginationQuery;
     this.logger.debug({ location: 'findAll()', limit, offset });
-    const pagination: Pagination = { limit, offset };
+    const pagination: any = { limit, offset };
     return this.coffeesService.findAll(pagination);
   }
 
